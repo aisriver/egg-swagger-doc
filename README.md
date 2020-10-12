@@ -16,7 +16,7 @@ $ npm i egg-swagger-doc-pro --save
 
 ```js
 // {app_root}/config/plugin.js
-exports.swaggerDoc = {
+exports.swaggerdoc = {
 	enable: true,
 	package: 'egg-swagger-doc-pro',
 };
@@ -26,7 +26,7 @@ exports.swaggerDoc = {
 
 ```js
 // {app_root}/config/config.default.js
-exports.swaggerDoc = {
+exports.swaggerdoc = {
 	dirScanner: './app/controller',
 	apiInfo: {
 		title: 'egg-swagger',
@@ -148,7 +148,7 @@ class HomeController extends Controller {
 如果在 config 中开启并定义了 securityDefinitions,默认 enableSecurity 为 false.则可在注释块中加入@apikey，加入安全验证。也可定义成其他名字，只需@定义好的字段名就好。关于 securityDefinitions 的定义可以自行搜索。
 
 ```js
-exports.swaggerDoc = {
+exports.swaggerdoc = {
 	securityDefinitions: {
 		apikey: {
 			type: 'apiKey',
